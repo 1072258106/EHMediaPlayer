@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A0869AD1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0869AC1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.m */; settings = {COMPILER_FLAGS = "-all_load"; }; };
+		3A0869BE1BA6C05A003824DB /* EHVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0869BB1BA6C05A003824DB /* EHVideoFrame.m */; };
+		3A0869C01BA6C05A003824DB /* EHVideoFrameRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0869BC1BA6C05A003824DB /* EHVideoFrameRGB.m */; };
+		3A0869C21BA6C05A003824DB /* EHVideoFrameYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0869BD1BA6C05A003824DB /* EHVideoFrameYUV.m */; };
+		3A0869C71BA6C7DC003824DB /* EHAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0869C61BA6C7DC003824DB /* EHAudioFrame.m */; };
+		3A0BD8F91BC8BB2800BAA48E /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F11BC8BB2800BAA48E /* libavcodec.a */; };
+		3A0BD8FA1BC8BB2800BAA48E /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F21BC8BB2800BAA48E /* libavdevice.a */; };
+		3A0BD8FB1BC8BB2800BAA48E /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F31BC8BB2800BAA48E /* libavfilter.a */; };
+		3A0BD8FC1BC8BB2800BAA48E /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F41BC8BB2800BAA48E /* libavformat.a */; };
+		3A0BD8FD1BC8BB2800BAA48E /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F51BC8BB2800BAA48E /* libavutil.a */; };
+		3A0BD8FE1BC8BB2800BAA48E /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F61BC8BB2800BAA48E /* libpostproc.a */; };
+		3A0BD8FF1BC8BB2800BAA48E /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F71BC8BB2800BAA48E /* libswresample.a */; };
+		3A0BD9001BC8BB2800BAA48E /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0BD8F81BC8BB2800BAA48E /* libswscale.a */; };
+		3A0BD9011BC8D69400BAA48E /* libBoost-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5764D61BA16FE8002D6BBB /* libBoost-iOS.a */; };
+		3A17EF921C02EBB4006B2325 /* EHPictureGrasp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A17EF911C02EBB4006B2325 /* EHPictureGrasp.m */; };
+		3A1F2C481B9D6061006A654F /* EHMediaPlayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A1F2C471B9D6061006A654F /* EHMediaPlayer.h */; };
+		3A1F2C4A1B9D6061006A654F /* EHMediaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F2C491B9D6061006A654F /* EHMediaPlayer.m */; };
+		3A1F2C501B9D6061006A654F /* libEHMediaPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F2C441B9D6061006A654F /* libEHMediaPlayer.a */; };
+		3A2028D21BD7558300A8F52F /* EHCodecSourceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2028D11BD7558300A8F52F /* EHCodecSourceFactory.m */; };
+		3A2028DB1BD7740700A8F52F /* libhwnet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC575631BBA259B00B4B8CA /* libhwnet.a */; };
+		3A2E26291BB8D0E900DD22EB /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E26281BB8D0E900DD22EB /* libstdc++.6.tbd */; };
+		3A2E262B1BB8D0F800DD22EB /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E262A1BB8D0F800DD22EB /* libc.tbd */; };
+		3A2E262D1BB8D10300DD22EB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E262C1BB8D10300DD22EB /* libz.tbd */; };
+		3A2E262F1BB8D11000DD22EB /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2E262E1BB8D11000DD22EB /* libbz2.tbd */; };
+		3A4E74E01BC79BB4005230A1 /* libEHMediaPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1F2C441B9D6061006A654F /* libEHMediaPlayer.a */; };
+		3A4E74E11BC7A17E005230A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE1D62B1BA95C9E004407A5 /* AudioToolbox.framework */; };
+		3A4E74E21BC7A3D1005230A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE1D62B1BA95C9E004407A5 /* AudioToolbox.framework */; };
+		3A4E74E41BC7A4C0005230A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4E74E31BC7A4C0005230A1 /* AVFoundation.framework */; };
+		3A4E74E51BC7A4E5005230A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4E74E31BC7A4C0005230A1 /* AVFoundation.framework */; };
+		3A5764C71BA127EF002D6BBB /* EHOVCodecSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5764C61BA127EF002D6BBB /* EHOVCodecSource.m */; };
+		3A5764E91BA17028002D6BBB /* libhwplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5764E81BA17028002D6BBB /* libhwplay.a */; };
+		3A5764EB1BA1704C002D6BBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5764EA1BA1704C002D6BBB /* Foundation.framework */; };
+		3A5764F51BA1785E002D6BBB /* EHCodecFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5764F41BA1785D002D6BBB /* EHCodecFrame.m */; };
+		3A63F2F91C115B5200F51770 /* EHDecoderFacotry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63F2F81C115B5200F51770 /* EHDecoderFacotry.m */; };
+		3A63F2FD1C1166BD00F51770 /* EHHowellStreamDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63F2FC1C1166BD00F51770 /* EHHowellStreamDecoder.m */; };
+		3A63F3001C116F9600F51770 /* EHHowellLocalDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63F2FF1C116F9600F51770 /* EHHowellLocalDecoder.m */; };
+		3A7EE7431BFDD75800E46992 /* Covert2Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EE7421BFDD75800E46992 /* Covert2Picture.m */; };
+		3AA889D21BD87C960060CD15 /* EHOVLiveCodecSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA889D11BD87C960060CD15 /* EHOVLiveCodecSource.m */; };
+		3AA889D61BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA889D51BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.m */; };
+		3AA9B2EF1BA7B94D006325C2 /* EHVideoGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9B2EE1BA7B94D006325C2 /* EHVideoGLView.m */; };
+		3AA9B2F41BA7B9D4006325C2 /* EHVideoGLRendererYUV.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9B2F31BA7B9D4006325C2 /* EHVideoGLRendererYUV.m */; };
+		3AC575671BBA2EAF00B4B8CA /* FlieTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC575661BBA2EAF00B4B8CA /* FlieTableViewController.m */; };
+		3AC575D91BBA51ED00B4B8CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC575D81BBA51ED00B4B8CA /* ViewController.m */; };
+		3AE1AC7E1B9EAF54006A9100 /* EHMediaFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1AC7D1B9EAF54006A9100 /* EHMediaFrame.m */; };
+		3AE1AC881B9EBA12006A9100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1AC871B9EBA12006A9100 /* main.m */; };
+		3AE1AC8B1B9EBA12006A9100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1AC8A1B9EBA12006A9100 /* AppDelegate.m */; };
+		3AE1AC911B9EBA12006A9100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE1AC8F1B9EBA12006A9100 /* Main.storyboard */; };
+		3AE1AC931B9EBA12006A9100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE1AC921B9EBA12006A9100 /* Images.xcassets */; };
+		3AE1AC961B9EBA12006A9100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE1AC941B9EBA12006A9100 /* LaunchScreen.xib */; };
+		3AE1ACAB1B9EBA6E006A9100 /* EHHowellDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1ACAA1B9EBA6E006A9100 /* EHHowellDecoder.m */; };
+		3AE1D6291BA95B4F004407A5 /* EHAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE1D6281BA95B4F004407A5 /* EHAudioManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A1F2C511B9D6061006A654F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A1F2C3C1B9D6061006A654F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A1F2C431B9D6061006A654F;
+			remoteInfo = EHMediaPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A1F2C421B9D6061006A654F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3A1F2C481B9D6061006A654F /* EHMediaPlayer.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A0869AB1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EHVideoFrameYUV+HowellDecoder.h"; sourceTree = "<group>"; };
+		3A0869AC1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EHVideoFrameYUV+HowellDecoder.m"; sourceTree = "<group>"; };
+		3A0869AF1BA6BA1C003824DB /* EHVideoFrameYUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoFrameYUV.h; sourceTree = "<group>"; };
+		3A0869B31BA6BE4B003824DB /* EHVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoFrame.h; sourceTree = "<group>"; };
+		3A0869B71BA6BEDE003824DB /* EHVideoFrameRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoFrameRGB.h; sourceTree = "<group>"; };
+		3A0869BB1BA6C05A003824DB /* EHVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVideoFrame.m; sourceTree = "<group>"; };
+		3A0869BC1BA6C05A003824DB /* EHVideoFrameRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVideoFrameRGB.m; sourceTree = "<group>"; };
+		3A0869BD1BA6C05A003824DB /* EHVideoFrameYUV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVideoFrameYUV.m; sourceTree = "<group>"; };
+		3A0869C51BA6C7DC003824DB /* EHAudioFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAudioFrame.h; sourceTree = "<group>"; };
+		3A0869C61BA6C7DC003824DB /* EHAudioFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAudioFrame.m; sourceTree = "<group>"; };
+		3A0BD8F11BC8BB2800BAA48E /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libavcodec.a; sourceTree = "<group>"; };
+		3A0BD8F21BC8BB2800BAA48E /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libavdevice.a; sourceTree = "<group>"; };
+		3A0BD8F31BC8BB2800BAA48E /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libavfilter.a; sourceTree = "<group>"; };
+		3A0BD8F41BC8BB2800BAA48E /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libavformat.a; sourceTree = "<group>"; };
+		3A0BD8F51BC8BB2800BAA48E /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libavutil.a; sourceTree = "<group>"; };
+		3A0BD8F61BC8BB2800BAA48E /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libpostproc.a; sourceTree = "<group>"; };
+		3A0BD8F71BC8BB2800BAA48E /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libswresample.a; sourceTree = "<group>"; };
+		3A0BD8F81BC8BB2800BAA48E /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ../../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg2.1/lib/libswscale.a; sourceTree = "<group>"; };
+		3A17EF901C02EBB4006B2325 /* EHPictureGrasp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPictureGrasp.h; sourceTree = "<group>"; };
+		3A17EF911C02EBB4006B2325 /* EHPictureGrasp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPictureGrasp.m; sourceTree = "<group>"; };
+		3A1F2C441B9D6061006A654F /* libEHMediaPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEHMediaPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1F2C471B9D6061006A654F /* EHMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHMediaPlayer.h; sourceTree = "<group>"; };
+		3A1F2C491B9D6061006A654F /* EHMediaPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHMediaPlayer.m; sourceTree = "<group>"; };
+		3A1F2C4F1B9D6061006A654F /* EHMediaPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EHMediaPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1F2C551B9D6062006A654F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1F2C641B9D7079006A654F /* EHDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHDecoder.h; sourceTree = "<group>"; };
+		3A2028D01BD7558300A8F52F /* EHCodecSourceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCodecSourceFactory.h; sourceTree = "<group>"; };
+		3A2028D11BD7558300A8F52F /* EHCodecSourceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCodecSourceFactory.m; sourceTree = "<group>"; };
+		3A2028D31BD75B9300A8F52F /* EHCodecSourceInfoKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHCodecSourceInfoKey.h; sourceTree = "<group>"; };
+		3A2E26281BB8D0E900DD22EB /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		3A2E262A1BB8D0F800DD22EB /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		3A2E262C1BB8D10300DD22EB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3A2E262E1BB8D11000DD22EB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		3A4E74E31BC7A4C0005230A1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3A5764C51BA127EF002D6BBB /* EHOVCodecSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHOVCodecSource.h; sourceTree = "<group>"; };
+		3A5764C61BA127EF002D6BBB /* EHOVCodecSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOVCodecSource.m; sourceTree = "<group>"; };
+		3A5764D61BA16FE8002D6BBB /* libBoost-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libBoost-iOS.a"; path = "../../../../../../workspace/libs/boost_build/Boost-iOS/libBoost-iOS.a"; sourceTree = "<group>"; };
+		3A5764E81BA17028002D6BBB /* libhwplay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhwplay.a; path = ../../../../../../workspace/libs/play_sdk_for_ios_audio/libhwplay.a; sourceTree = "<group>"; };
+		3A5764EA1BA1704C002D6BBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A5764F41BA1785D002D6BBB /* EHCodecFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHCodecFrame.m; sourceTree = "<group>"; };
+		3A63F2F61C11583E00F51770 /* EHDecoderKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHDecoderKey.h; sourceTree = "<group>"; };
+		3A63F2F71C115B5200F51770 /* EHDecoderFacotry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHDecoderFacotry.h; sourceTree = "<group>"; };
+		3A63F2F81C115B5200F51770 /* EHDecoderFacotry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHDecoderFacotry.m; sourceTree = "<group>"; };
+		3A63F2FB1C1166BD00F51770 /* EHHowellStreamDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHowellStreamDecoder.h; sourceTree = "<group>"; };
+		3A63F2FC1C1166BD00F51770 /* EHHowellStreamDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHowellStreamDecoder.m; sourceTree = "<group>"; };
+		3A63F2FE1C116F9600F51770 /* EHHowellLocalDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHowellLocalDecoder.h; sourceTree = "<group>"; };
+		3A63F2FF1C116F9600F51770 /* EHHowellLocalDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHowellLocalDecoder.m; sourceTree = "<group>"; };
+		3A63F3011C11747500F51770 /* EHHowellDecoderKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHHowellDecoderKey.h; sourceTree = "<group>"; };
+		3A74F0F41BA01F25005C772C /* EHCodecSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHCodecSource.h; sourceTree = "<group>"; };
+		3A7EE7411BFDD75800E46992 /* Covert2Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Covert2Picture.h; sourceTree = "<group>"; };
+		3A7EE7421BFDD75800E46992 /* Covert2Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Covert2Picture.m; sourceTree = "<group>"; };
+		3AA889D01BD87C960060CD15 /* EHOVLiveCodecSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHOVLiveCodecSource.h; sourceTree = "<group>"; };
+		3AA889D11BD87C960060CD15 /* EHOVLiveCodecSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOVLiveCodecSource.m; sourceTree = "<group>"; };
+		3AA889D41BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHOVPlaybackCodecSource.h; sourceTree = "<group>"; };
+		3AA889D51BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHOVPlaybackCodecSource.m; sourceTree = "<group>"; };
+		3AA9B2ED1BA7B94D006325C2 /* EHVideoGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoGLView.h; sourceTree = "<group>"; };
+		3AA9B2EE1BA7B94D006325C2 /* EHVideoGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVideoGLView.m; sourceTree = "<group>"; };
+		3AA9B2F11BA7B98F006325C2 /* EHVideoGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoGLRenderer.h; sourceTree = "<group>"; };
+		3AA9B2F21BA7B9D4006325C2 /* EHVideoGLRendererYUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHVideoGLRendererYUV.h; sourceTree = "<group>"; };
+		3AA9B2F31BA7B9D4006325C2 /* EHVideoGLRendererYUV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHVideoGLRendererYUV.m; sourceTree = "<group>"; };
+		3AC575631BBA259B00B4B8CA /* libhwnet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhwnet.a; path = ../../../../../../workspace/libs/hw_net_sdk_ex_new/libhwnet.a; sourceTree = "<group>"; };
+		3AC575651BBA2EAF00B4B8CA /* FlieTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlieTableViewController.h; sourceTree = "<group>"; };
+		3AC575661BBA2EAF00B4B8CA /* FlieTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlieTableViewController.m; sourceTree = "<group>"; };
+		3AC575D71BBA51ED00B4B8CA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3AC575D81BBA51ED00B4B8CA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3AE1AC7C1B9EAF54006A9100 /* EHMediaFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHMediaFrame.h; sourceTree = "<group>"; };
+		3AE1AC7D1B9EAF54006A9100 /* EHMediaFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHMediaFrame.m; sourceTree = "<group>"; };
+		3AE1AC831B9EBA12006A9100 /* EHMediaPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EHMediaPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE1AC861B9EBA12006A9100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE1AC871B9EBA12006A9100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AE1AC891B9EBA12006A9100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3AE1AC8A1B9EBA12006A9100 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3AE1AC901B9EBA12006A9100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AE1AC921B9EBA12006A9100 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AE1AC951B9EBA12006A9100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3AE1ACA91B9EBA6E006A9100 /* EHHowellDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHowellDecoder.h; sourceTree = "<group>"; };
+		3AE1ACAA1B9EBA6E006A9100 /* EHHowellDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHowellDecoder.m; sourceTree = "<group>"; };
+		3AE1ACAC1B9ECBF5006A9100 /* EHCodecFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHCodecFrame.h; sourceTree = "<group>"; };
+		3AE1D6271BA95B4F004407A5 /* EHAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAudioManager.h; sourceTree = "<group>"; };
+		3AE1D6281BA95B4F004407A5 /* EHAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAudioManager.m; sourceTree = "<group>"; };
+		3AE1D62B1BA95C9E004407A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3AF6803B1C06F5D7006CCD22 /* EHMediaPlayerKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHMediaPlayerKey.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A1F2C411B9D6061006A654F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4E74E41BC7A4C0005230A1 /* AVFoundation.framework in Frameworks */,
+				3A4E74E11BC7A17E005230A1 /* AudioToolbox.framework in Frameworks */,
+				3A0BD8F91BC8BB2800BAA48E /* libavcodec.a in Frameworks */,
+				3A0BD8FA1BC8BB2800BAA48E /* libavdevice.a in Frameworks */,
+				3A0BD8FB1BC8BB2800BAA48E /* libavfilter.a in Frameworks */,
+				3A0BD8FC1BC8BB2800BAA48E /* libavformat.a in Frameworks */,
+				3A0BD8FD1BC8BB2800BAA48E /* libavutil.a in Frameworks */,
+				3A0BD8FE1BC8BB2800BAA48E /* libpostproc.a in Frameworks */,
+				3A0BD8FF1BC8BB2800BAA48E /* libswresample.a in Frameworks */,
+				3A0BD9001BC8BB2800BAA48E /* libswscale.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1F2C4C1B9D6061006A654F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A1F2C501B9D6061006A654F /* libEHMediaPlayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE1AC801B9EBA12006A9100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A5764EB1BA1704C002D6BBB /* Foundation.framework in Frameworks */,
+				3A4E74E51BC7A4E5005230A1 /* AVFoundation.framework in Frameworks */,
+				3A4E74E21BC7A3D1005230A1 /* AudioToolbox.framework in Frameworks */,
+				3A4E74E01BC79BB4005230A1 /* libEHMediaPlayer.a in Frameworks */,
+				3A2E262F1BB8D11000DD22EB /* libbz2.tbd in Frameworks */,
+				3A2E262D1BB8D10300DD22EB /* libz.tbd in Frameworks */,
+				3A2E262B1BB8D0F800DD22EB /* libc.tbd in Frameworks */,
+				3A2E26291BB8D0E900DD22EB /* libstdc++.6.tbd in Frameworks */,
+				3A0BD9011BC8D69400BAA48E /* libBoost-iOS.a in Frameworks */,
+				3A2028DB1BD7740700A8F52F /* libhwnet.a in Frameworks */,
+				3A5764E91BA17028002D6BBB /* libhwplay.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A0869C41BA6C756003824DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A0BD8F11BC8BB2800BAA48E /* libavcodec.a */,
+				3A0BD8F21BC8BB2800BAA48E /* libavdevice.a */,
+				3A0BD8F31BC8BB2800BAA48E /* libavfilter.a */,
+				3A0BD8F41BC8BB2800BAA48E /* libavformat.a */,
+				3A0BD8F51BC8BB2800BAA48E /* libavutil.a */,
+				3A0BD8F61BC8BB2800BAA48E /* libpostproc.a */,
+				3A0BD8F71BC8BB2800BAA48E /* libswresample.a */,
+				3A0BD8F81BC8BB2800BAA48E /* libswscale.a */,
+				3A4E74E31BC7A4C0005230A1 /* AVFoundation.framework */,
+				3AC575631BBA259B00B4B8CA /* libhwnet.a */,
+				3A2E262E1BB8D11000DD22EB /* libbz2.tbd */,
+				3A2E262C1BB8D10300DD22EB /* libz.tbd */,
+				3A2E262A1BB8D0F800DD22EB /* libc.tbd */,
+				3A2E26281BB8D0E900DD22EB /* libstdc++.6.tbd */,
+				3AE1D62B1BA95C9E004407A5 /* AudioToolbox.framework */,
+				3A5764EA1BA1704C002D6BBB /* Foundation.framework */,
+				3A5764E81BA17028002D6BBB /* libhwplay.a */,
+				3A5764D61BA16FE8002D6BBB /* libBoost-iOS.a */,
+			);
+			name = Frameworks;
+			path = EHMediaPlayerDemo;
+			sourceTree = "<group>";
+		};
+		3A0869C91BA6C83C003824DB /* DecodeModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1AC7C1B9EAF54006A9100 /* EHMediaFrame.h */,
+				3AE1AC7D1B9EAF54006A9100 /* EHMediaFrame.m */,
+				3A0869B31BA6BE4B003824DB /* EHVideoFrame.h */,
+				3A0869BB1BA6C05A003824DB /* EHVideoFrame.m */,
+				3A0869AF1BA6BA1C003824DB /* EHVideoFrameYUV.h */,
+				3A0869BD1BA6C05A003824DB /* EHVideoFrameYUV.m */,
+				3A0869AB1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.h */,
+				3A0869AC1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.m */,
+				3A0869B71BA6BEDE003824DB /* EHVideoFrameRGB.h */,
+				3A0869BC1BA6C05A003824DB /* EHVideoFrameRGB.m */,
+				3A0869C51BA6C7DC003824DB /* EHAudioFrame.h */,
+				3A0869C61BA6C7DC003824DB /* EHAudioFrame.m */,
+			);
+			name = DecodeModel;
+			sourceTree = "<group>";
+		};
+		3A0869CA1BA6C85B003824DB /* CodecModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1ACAC1B9ECBF5006A9100 /* EHCodecFrame.h */,
+				3A5764F41BA1785D002D6BBB /* EHCodecFrame.m */,
+			);
+			name = CodecModel;
+			sourceTree = "<group>";
+		};
+		3A1F2C3B1B9D6061006A654F = {
+			isa = PBXGroup;
+			children = (
+				3A1F2C461B9D6061006A654F /* EHMediaPlayer */,
+				3AE1AC841B9EBA12006A9100 /* EHMediaPlayerDemo */,
+				3A1F2C531B9D6062006A654F /* EHMediaPlayerTests */,
+				3A0869C41BA6C756003824DB /* Frameworks */,
+				3A1F2C451B9D6061006A654F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A1F2C451B9D6061006A654F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F2C441B9D6061006A654F /* libEHMediaPlayer.a */,
+				3A1F2C4F1B9D6061006A654F /* EHMediaPlayerTests.xctest */,
+				3AE1AC831B9EBA12006A9100 /* EHMediaPlayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A1F2C461B9D6061006A654F /* EHMediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3AF6803B1C06F5D7006CCD22 /* EHMediaPlayerKey.h */,
+				3A1F2C471B9D6061006A654F /* EHMediaPlayer.h */,
+				3A1F2C491B9D6061006A654F /* EHMediaPlayer.m */,
+				3ABA042F1BAA951600EA4589 /* Utility */,
+				3A1F2C651B9D795E006A654F /* Model */,
+				3A1F2C631B9D619B006A654F /* DataSource */,
+				3A1F2C621B9D60EA006A654F /* Decoder */,
+				3A7EE73D1BFDCE2200E46992 /* GraspImage */,
+				3A1F2C611B9D60D3006A654F /* Display */,
+				3AE1D6261BA95AFE004407A5 /* Audio */,
+			);
+			path = EHMediaPlayer;
+			sourceTree = "<group>";
+		};
+		3A1F2C531B9D6062006A654F /* EHMediaPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F2C541B9D6062006A654F /* Supporting Files */,
+			);
+			path = EHMediaPlayerTests;
+			sourceTree = "<group>";
+		};
+		3A1F2C541B9D6062006A654F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F2C551B9D6062006A654F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A1F2C611B9D60D3006A654F /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				3AA9B2F11BA7B98F006325C2 /* EHVideoGLRenderer.h */,
+				3AA9B2F21BA7B9D4006325C2 /* EHVideoGLRendererYUV.h */,
+				3AA9B2F31BA7B9D4006325C2 /* EHVideoGLRendererYUV.m */,
+				3AA9B2ED1BA7B94D006325C2 /* EHVideoGLView.h */,
+				3AA9B2EE1BA7B94D006325C2 /* EHVideoGLView.m */,
+			);
+			name = Display;
+			sourceTree = "<group>";
+		};
+		3A1F2C621B9D60EA006A654F /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F2C641B9D7079006A654F /* EHDecoder.h */,
+				3A63F2F61C11583E00F51770 /* EHDecoderKey.h */,
+				3A63F2F71C115B5200F51770 /* EHDecoderFacotry.h */,
+				3A63F2F81C115B5200F51770 /* EHDecoderFacotry.m */,
+				3A63F2FA1C115F2500F51770 /* HowellDecoder */,
+			);
+			name = Decoder;
+			sourceTree = "<group>";
+		};
+		3A1F2C631B9D619B006A654F /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3A74F0F41BA01F25005C772C /* EHCodecSource.h */,
+				3A2028D31BD75B9300A8F52F /* EHCodecSourceInfoKey.h */,
+				3A2028D01BD7558300A8F52F /* EHCodecSourceFactory.h */,
+				3A2028D11BD7558300A8F52F /* EHCodecSourceFactory.m */,
+				3AA889D31BD8BF740060CD15 /* OVCodecSource */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		3A1F2C651B9D795E006A654F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A0869CA1BA6C85B003824DB /* CodecModel */,
+				3A0869C91BA6C83C003824DB /* DecodeModel */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3A63F2FA1C115F2500F51770 /* HowellDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				3A63F3011C11747500F51770 /* EHHowellDecoderKey.h */,
+				3AE1ACA91B9EBA6E006A9100 /* EHHowellDecoder.h */,
+				3AE1ACAA1B9EBA6E006A9100 /* EHHowellDecoder.m */,
+				3A63F2FB1C1166BD00F51770 /* EHHowellStreamDecoder.h */,
+				3A63F2FC1C1166BD00F51770 /* EHHowellStreamDecoder.m */,
+				3A63F2FE1C116F9600F51770 /* EHHowellLocalDecoder.h */,
+				3A63F2FF1C116F9600F51770 /* EHHowellLocalDecoder.m */,
+			);
+			name = HowellDecoder;
+			sourceTree = "<group>";
+		};
+		3A7EE73D1BFDCE2200E46992 /* GraspImage */ = {
+			isa = PBXGroup;
+			children = (
+				3A17EF901C02EBB4006B2325 /* EHPictureGrasp.h */,
+				3A17EF911C02EBB4006B2325 /* EHPictureGrasp.m */,
+				3A7EE7411BFDD75800E46992 /* Covert2Picture.h */,
+				3A7EE7421BFDD75800E46992 /* Covert2Picture.m */,
+			);
+			name = GraspImage;
+			sourceTree = "<group>";
+		};
+		3AA889D31BD8BF740060CD15 /* OVCodecSource */ = {
+			isa = PBXGroup;
+			children = (
+				3A5764C51BA127EF002D6BBB /* EHOVCodecSource.h */,
+				3A5764C61BA127EF002D6BBB /* EHOVCodecSource.m */,
+				3AA889D01BD87C960060CD15 /* EHOVLiveCodecSource.h */,
+				3AA889D11BD87C960060CD15 /* EHOVLiveCodecSource.m */,
+				3AA889D41BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.h */,
+				3AA889D51BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.m */,
+			);
+			name = OVCodecSource;
+			sourceTree = "<group>";
+		};
+		3ABA042F1BAA951600EA4589 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		3AC575DA1BBA567F00B4B8CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3AE1AC841B9EBA12006A9100 /* EHMediaPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3AC575DA1BBA567F00B4B8CA /* Model */,
+				3AE1AC891B9EBA12006A9100 /* AppDelegate.h */,
+				3AE1AC8A1B9EBA12006A9100 /* AppDelegate.m */,
+				3AC575D71BBA51ED00B4B8CA /* ViewController.h */,
+				3AC575D81BBA51ED00B4B8CA /* ViewController.m */,
+				3AC575651BBA2EAF00B4B8CA /* FlieTableViewController.h */,
+				3AC575661BBA2EAF00B4B8CA /* FlieTableViewController.m */,
+				3AE1AC8F1B9EBA12006A9100 /* Main.storyboard */,
+				3AE1AC921B9EBA12006A9100 /* Images.xcassets */,
+				3AE1AC941B9EBA12006A9100 /* LaunchScreen.xib */,
+				3AE1AC851B9EBA12006A9100 /* Supporting Files */,
+			);
+			path = EHMediaPlayerDemo;
+			sourceTree = "<group>";
+		};
+		3AE1AC851B9EBA12006A9100 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1AC861B9EBA12006A9100 /* Info.plist */,
+				3AE1AC871B9EBA12006A9100 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AE1D6261BA95AFE004407A5 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				3AE1D6271BA95B4F004407A5 /* EHAudioManager.h */,
+				3AE1D6281BA95B4F004407A5 /* EHAudioManager.m */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A1F2C431B9D6061006A654F /* EHMediaPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A1F2C581B9D6062006A654F /* Build configuration list for PBXNativeTarget "EHMediaPlayer" */;
+			buildPhases = (
+				3A1F2C401B9D6061006A654F /* Sources */,
+				3A1F2C411B9D6061006A654F /* Frameworks */,
+				3A1F2C421B9D6061006A654F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EHMediaPlayer;
+			productName = EHMediaPlayer;
+			productReference = 3A1F2C441B9D6061006A654F /* libEHMediaPlayer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3A1F2C4E1B9D6061006A654F /* EHMediaPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A1F2C5B1B9D6062006A654F /* Build configuration list for PBXNativeTarget "EHMediaPlayerTests" */;
+			buildPhases = (
+				3A1F2C4B1B9D6061006A654F /* Sources */,
+				3A1F2C4C1B9D6061006A654F /* Frameworks */,
+				3A1F2C4D1B9D6061006A654F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A1F2C521B9D6061006A654F /* PBXTargetDependency */,
+			);
+			name = EHMediaPlayerTests;
+			productName = EHMediaPlayerTests;
+			productReference = 3A1F2C4F1B9D6061006A654F /* EHMediaPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AE1AC821B9EBA12006A9100 /* EHMediaPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE1ACA31B9EBA12006A9100 /* Build configuration list for PBXNativeTarget "EHMediaPlayerDemo" */;
+			buildPhases = (
+				3AE1AC7F1B9EBA12006A9100 /* Sources */,
+				3AE1AC801B9EBA12006A9100 /* Frameworks */,
+				3AE1AC811B9EBA12006A9100 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EHMediaPlayerDemo;
+			productName = EHMediaPlayerDemo;
+			productReference = 3AE1AC831B9EBA12006A9100 /* EHMediaPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A1F2C3C1B9D6061006A654F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = ender;
+				TargetAttributes = {
+					3A1F2C431B9D6061006A654F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					3A1F2C4E1B9D6061006A654F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					3AE1AC821B9EBA12006A9100 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 3A1F2C3F1B9D6061006A654F /* Build configuration list for PBXProject "EHMediaPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A1F2C3B1B9D6061006A654F;
+			productRefGroup = 3A1F2C451B9D6061006A654F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A1F2C431B9D6061006A654F /* EHMediaPlayer */,
+				3A1F2C4E1B9D6061006A654F /* EHMediaPlayerTests */,
+				3AE1AC821B9EBA12006A9100 /* EHMediaPlayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A1F2C4D1B9D6061006A654F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE1AC811B9EBA12006A9100 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE1AC911B9EBA12006A9100 /* Main.storyboard in Resources */,
+				3AE1AC961B9EBA12006A9100 /* LaunchScreen.xib in Resources */,
+				3AE1AC931B9EBA12006A9100 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A1F2C401B9D6061006A654F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA9B2EF1BA7B94D006325C2 /* EHVideoGLView.m in Sources */,
+				3A7EE7431BFDD75800E46992 /* Covert2Picture.m in Sources */,
+				3AA889D21BD87C960060CD15 /* EHOVLiveCodecSource.m in Sources */,
+				3A0869BE1BA6C05A003824DB /* EHVideoFrame.m in Sources */,
+				3AA9B2F41BA7B9D4006325C2 /* EHVideoGLRendererYUV.m in Sources */,
+				3A2028D21BD7558300A8F52F /* EHCodecSourceFactory.m in Sources */,
+				3AE1AC7E1B9EAF54006A9100 /* EHMediaFrame.m in Sources */,
+				3A0869C01BA6C05A003824DB /* EHVideoFrameRGB.m in Sources */,
+				3A63F2F91C115B5200F51770 /* EHDecoderFacotry.m in Sources */,
+				3A0869AD1BA697E4003824DB /* EHVideoFrameYUV+HowellDecoder.m in Sources */,
+				3AE1ACAB1B9EBA6E006A9100 /* EHHowellDecoder.m in Sources */,
+				3A5764F51BA1785E002D6BBB /* EHCodecFrame.m in Sources */,
+				3A0869C21BA6C05A003824DB /* EHVideoFrameYUV.m in Sources */,
+				3A1F2C4A1B9D6061006A654F /* EHMediaPlayer.m in Sources */,
+				3AA889D61BD8BFCF0060CD15 /* EHOVPlaybackCodecSource.m in Sources */,
+				3A63F2FD1C1166BD00F51770 /* EHHowellStreamDecoder.m in Sources */,
+				3AE1D6291BA95B4F004407A5 /* EHAudioManager.m in Sources */,
+				3A17EF921C02EBB4006B2325 /* EHPictureGrasp.m in Sources */,
+				3A63F3001C116F9600F51770 /* EHHowellLocalDecoder.m in Sources */,
+				3A0869C71BA6C7DC003824DB /* EHAudioFrame.m in Sources */,
+				3A5764C71BA127EF002D6BBB /* EHOVCodecSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A1F2C4B1B9D6061006A654F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE1AC7F1B9EBA12006A9100 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AC575671BBA2EAF00B4B8CA /* FlieTableViewController.m in Sources */,
+				3AC575D91BBA51ED00B4B8CA /* ViewController.m in Sources */,
+				3AE1AC8B1B9EBA12006A9100 /* AppDelegate.m in Sources */,
+				3AE1AC881B9EBA12006A9100 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A1F2C521B9D6061006A654F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A1F2C431B9D6061006A654F /* EHMediaPlayer */;
+			targetProxy = 3A1F2C511B9D6061006A654F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AE1AC8F1B9EBA12006A9100 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AE1AC901B9EBA12006A9100 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AE1AC941B9EBA12006A9100 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AE1AC951B9EBA12006A9100 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A1F2C561B9D6062006A654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_ASM_KEYWORD = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					/Users/howell/workspace/libs/ffmpegBuild/iphoneos/lib,
+					"/Users/howell/workspace/libs/boost_build/Boost-iOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Debug;
+		};
+		3A1F2C571B9D6062006A654F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_ASM_KEYWORD = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					/Users/howell/workspace/libs/ffmpegBuild/iphoneos/lib,
+					"/Users/howell/workspace/libs/boost_build/Boost-iOS",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Release;
+		};
+		3A1F2C591B9D6062006A654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					"\"$(SRCROOT)/../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg1.2/include\"",
+					"\"$(SRCROOT)/EHMediaPlayer\"",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg1.2/lib\"";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A1F2C5A1B9D6062006A654F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					"\"$(SRCROOT)/../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg1.2/include\"",
+					"\"$(SRCROOT)/EHMediaPlayer\"",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../workspace/libs/ffmpegBuild/iphoneos_ffmpeg1.2/lib\"";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3A1F2C5C1B9D6062006A654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EHMediaPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A1F2C5D1B9D6062006A654F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EHMediaPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3AE1ACA41B9EBA12006A9100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/EHMediaPlayer\"",
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+				);
+				INFOPLIST_FILE = EHMediaPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/howell/workspace/libs/boost_build/Boost-iOS",
+					/Users/howell/workspace/libs/ffmpegBuild/iphoneos/lib,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Debug;
+		};
+		3AE1ACA51B9EBA12006A9100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/EHMediaPlayer\"",
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+				);
+				INFOPLIST_FILE = EHMediaPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/howell/workspace/libs/boost_build/Boost-iOS",
+					/Users/howell/workspace/libs/ffmpegBuild/iphoneos/lib,
+					/Users/howell/workspace/libs/hw_net_sdk_ex_new,
+					/Users/howell/workspace/libs/play_sdk_for_ios_audio,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A1F2C3F1B9D6061006A654F /* Build configuration list for PBXProject "EHMediaPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1F2C561B9D6062006A654F /* Debug */,
+				3A1F2C571B9D6062006A654F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A1F2C581B9D6062006A654F /* Build configuration list for PBXNativeTarget "EHMediaPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1F2C591B9D6062006A654F /* Debug */,
+				3A1F2C5A1B9D6062006A654F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A1F2C5B1B9D6062006A654F /* Build configuration list for PBXNativeTarget "EHMediaPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1F2C5C1B9D6062006A654F /* Debug */,
+				3A1F2C5D1B9D6062006A654F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AE1ACA31B9EBA12006A9100 /* Build configuration list for PBXNativeTarget "EHMediaPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE1ACA41B9EBA12006A9100 /* Debug */,
+				3AE1ACA51B9EBA12006A9100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A1F2C3C1B9D6061006A654F /* Project object */;
+}
